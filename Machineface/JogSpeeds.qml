@@ -3,7 +3,9 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.2
 import Machinekit.Application.Controls 1.0
 
-RowLayout {
+GridLayout {
+    id:grid
+    columns:2
     Label {
         id: label1
         text: qsTr("X/Y:")
