@@ -6,7 +6,7 @@ import Machinekit.Application.Controls 1.0
 GridLayout {
     id:grid
     columns:2
-        anchors.right: parent.left
+        anchors.right: parent.right
         anchors.bottom: parent.bottom
     Label {
         Layout.maximumWidth: 30
