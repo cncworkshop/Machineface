@@ -6,14 +6,19 @@ import Machinekit.Application.Controls 1.0
 GridLayout {
     id:grid
     columns:2
+        anchors.right: parent.left
+        anchors.bottom: parent.bottom
     Label {
+        Layout.maximumWidth: 30
+        Layout.maximumHeight: 20
         id: label1
         text: qsTr("X/Y:")
         font.bold: true
     }
 
     SpinBox {
-        Layout.fillWidth: true
+        Layout.maximumWidth: 40
+        Layout.maximumHeight: 20
         id: xVelocitySpin
         enabled: xVelocityHandler.enabled
         minimumValue: xVelocityHandler.minimumValue
@@ -41,13 +46,16 @@ GridLayout {
     }
 
     Label {
+        Layout.maximumWidth: 30
+        Layout.maximumHeight: 20
         text: qsTr("Z:")
         font.bold: true
         visible: zVelocitySpin.visible
     }
 
     SpinBox {
-        Layout.fillWidth: true
+        Layout.maximumWidth: 40
+        Layout.maximumHeight: 20
         id: zVelocitySpin
         enabled: zVelocityHandler.enabled
         visible: zVelocityHandler.status.synced && (zVelocityHandler.status.config.axes > 2)
@@ -70,13 +78,16 @@ GridLayout {
     }
 
     Label {
+        Layout.maximumWidth: 30
+        Layout.maximumHeight: 20
         text: qsTr("A:")
         font.bold: true
         visible: aVelocitySpin.visible
     }
 
     SpinBox {
-        Layout.fillWidth: true
+        Layout.maximumWidth: 40
+        Layout.maximumHeight: 20
         id: aVelocitySpin
         visible: aVelocityHandler.status.synced && (aVelocityHandler.status.config.axes > 3)
         enabled: aVelocityHandler.enabled
